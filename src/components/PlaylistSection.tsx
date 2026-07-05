@@ -26,7 +26,6 @@ export const PlaylistSection: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [filterType, setFilterType] = useState<"all" | "admin" | "extra">("all");
 
-  // Identify default admin track IDs
   const adminTrackIds = useMemo(() => {
     const ids: string[] = [];
     ADMIN_PROFILES.forEach((admin) => {
@@ -37,7 +36,6 @@ export const PlaylistSection: React.FC = () => {
     return ids;
   }, []);
 
-  // Filtered list based on search and selected tab
   const filteredTracks = useMemo(() => {
     return allTracks.filter((track) => {
       const matchesSearch = 
@@ -60,7 +58,6 @@ export const PlaylistSection: React.FC = () => {
   return (
     <div className="space-y-6 md:space-y-10 py-2 md:py-4 px-2 sm:px-4" id="playlist-section-wrapper">
       
-      {/* Introduction block */}
       <motion.div 
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
@@ -78,7 +75,6 @@ export const PlaylistSection: React.FC = () => {
 
       <div className="max-w-4xl mx-auto space-y-4 md:space-y-6" id="playlist-controls-container">
         
-        {/* Cinematic Currently Playing Banner */}
         <AnimatePresence mode="wait">
           {currentTrack ? (
             <motion.div 
@@ -89,7 +85,6 @@ export const PlaylistSection: React.FC = () => {
               className="relative w-full rounded-2xl md:rounded-3xl overflow-hidden shadow-xl border border-white/40 group bg-stone-900"
               id="now-playing-cinematic-banner"
             >
-              {/* Background Graphic */}
               <div className="absolute inset-0 z-0">
                 <img 
                   src={currentTrack.coverUrl} 
@@ -99,10 +94,8 @@ export const PlaylistSection: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-orange-950/95 via-orange-950/80 to-orange-950/40" />
               </div>
 
-              {/* Banner Content */}
               <div className="relative z-10 p-4 sm:p-6 md:p-8 flex flex-col sm:flex-row items-center justify-between gap-4 md:gap-6" id="banner-content-container">
                 <div className="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
-                  {/* Vinyl style rotating cover */}
                   <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden shrink-0 shadow-lg border border-white/20 bg-stone-800">
                     <img 
                       src={currentTrack.coverUrl} 
@@ -165,10 +158,8 @@ export const PlaylistSection: React.FC = () => {
           )}
         </AnimatePresence>
 
-        {/* Search & Tabs Header */}
         <div className="flex flex-col sm:flex-row gap-3 items-center justify-between bg-white/20 backdrop-blur-lg p-3 sm:p-4 rounded-2xl sm:rounded-3xl border border-white/40 shadow-md" id="playlist-search-and-filter">
           
-          {/* Custom Search bar */}
           <div className="relative w-full sm:max-w-xs" id="search-bar-container">
             <span className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-orange-900/60">
               <Search className="w-4 h-4" />
@@ -183,7 +174,6 @@ export const PlaylistSection: React.FC = () => {
             />
           </div>
 
-          {/* Filtering tabs */}
           <div className="flex gap-1 bg-white/20 p-1 rounded-xl border border-white/25 w-full sm:w-auto overflow-x-auto" id="playlist-filter-tabs">
             <button
               onClick={() => setFilterType("all")}
@@ -221,7 +211,6 @@ export const PlaylistSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Tracks List Grid */}
         <div className="bg-white/20 backdrop-blur-lg rounded-2xl md:rounded-3xl border border-white/40 shadow-xl overflow-hidden" id="pooled-tracks-card">
           <div className="p-3 sm:p-4 border-b border-white/20 bg-white/30 flex items-center justify-between text-[10px] sm:text-xs font-bold text-orange-950 uppercase tracking-wider" id="playlist-stat-header">
             <span className="flex items-center gap-1.5">
@@ -249,7 +238,6 @@ export const PlaylistSection: React.FC = () => {
                   >
                     <div className="flex items-center space-x-3 min-w-0 flex-1">
                       
-                      {/* Track index / Play state */}
                       <div className="w-6 text-center text-xs font-mono text-orange-900/60 flex items-center justify-center font-bold">
                         {isCurrentPlayingThis && isPlaying ? (
                           <div className="flex items-end gap-0.5 h-3 w-3" id="index-soundwave-anim">
@@ -269,7 +257,6 @@ export const PlaylistSection: React.FC = () => {
                         </span>
                       </div>
 
-                      {/* Track Cover Art */}
                       <div className="relative w-10 h-10 sm:w-11 sm:h-11 rounded-xl overflow-hidden bg-stone-100 shadow-inner shrink-0 border border-white/20">
                         <img
                           src={track.coverUrl}
@@ -281,7 +268,6 @@ export const PlaylistSection: React.FC = () => {
                         <div className="absolute inset-0 bg-black/5" />
                       </div>
 
-                      {/* Track Info */}
                       <div className="min-w-0 flex-1">
                         <h4 className={`text-xs sm:text-sm font-extrabold truncate ${isCurrentPlayingThis ? "text-orange-900" : "text-orange-950"}`}>
                           {track.title}
@@ -292,7 +278,6 @@ export const PlaylistSection: React.FC = () => {
                       </div>
                     </div>
 
-                    {/* Right side status badges */}
                     <div className="flex items-center space-x-3 shrink-0">
                       {adminTrackIds.includes(track.id) ? (
                         <span className="inline-flex items-center gap-0.5 px-2 py-0.5 bg-orange-500/10 text-orange-950 font-black rounded-lg border border-orange-500/15 text-[9px] uppercase">
@@ -324,7 +309,6 @@ export const PlaylistSection: React.FC = () => {
           )}
         </div>
 
-        {/* Info Tip banner (Simplified, clean) */}
         <motion.div 
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
