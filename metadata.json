@@ -1,6 +1,0 @@
-{
-  "name": "Sunshine Bot",
-  "description": "Сайт-лендинг для поддержки и общения в Telegram-боте Sunshine с профилями администрации и общим плейлистом",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
