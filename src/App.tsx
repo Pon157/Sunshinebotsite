@@ -13,10 +13,8 @@ const MainLayout: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col text-orange-950 pb-32 pt-4 px-2 sm:px-4" id="app-root-layout">
-      {/* Dynamic Header */}
       <Header activeTab={activeTab} setActiveTab={setActiveTab} />
 
-      {/* Main Content Sections with Fluid Transitions */}
       <main className="flex-grow max-w-6xl w-full mx-auto pt-6" id="main-content-wrapper">
         <AnimatePresence mode="wait">
           <motion.div
@@ -34,7 +32,6 @@ const MainLayout: React.FC = () => {
         </AnimatePresence>
       </main>
 
-      {/* Footer Details in a beautiful frosted glass container */}
       <footer className="text-center py-8 px-6 bg-white/20 backdrop-blur-md border border-white/40 rounded-3xl mt-16 max-w-5xl mx-auto w-full text-xs text-orange-950/80 space-y-2 shadow-lg" id="app-footer-credits">
         <div className="flex items-center justify-center space-x-2 text-orange-900" id="footer-logo">
           <Sun className="w-4 h-4 text-orange-600 animate-spin-slow" style={{ animationDuration: "12s" }} />
@@ -49,7 +46,6 @@ const MainLayout: React.FC = () => {
         </div>
       </footer>
 
-      {/* Persistent global audio player bar */}
       <GlobalPlayerBar />
     </div>
   );
