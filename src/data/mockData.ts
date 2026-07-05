@@ -168,13 +168,34 @@ export const ADDITIONAL_TRACKS: Track[] = [
     title: "Glagiator",
     artist: "Jann",
     src: "/assets/music/jann_-_Gladiator_75450126.mp3",
-    coverUrl: "/assets/photos/photo_2026-04-21_12-33-06.jpg"
+    coverUrl: "/assets/photos/photo_2026-04-21_12-33-06.jpg"алёна швец. - Аллергия
   },
   {
     id: "add-3",
     title: "Mattyeux",
     artist: "Sometimes",
     src: "/assets/music/tmp2jzhxx5g.mp3",
+    coverUrl: "/assets/photos/photo_2026-04-21_12-33-06.jpg"
+  }
+  {
+    id: "add-4",
+    title: "Аллергия",
+    artist: "Алена Швец",
+    src: "/assets/music/алёна швец. - Аллергия.mp3",
+    coverUrl: "/assets/photos/photo_2026-04-21_12-33-06.jpg"
+  }
+  {
+    id: "add-5",
+    title: "Тесно",
+    artist: "BUSHIDO ZHO, ANIKV, Aarne",
+    src: "/assets/music/Тесно - Aarne, BUSHIDO ZHO, ANIKV  7c5lI.mp3",
+    coverUrl: "/assets/photos/photo_2026-04-21_12-33-06.jpg"
+  }
+  {
+    id: "add-5",
+    title: "Агенство насилия",
+    artist: "SABU",
+    src: "/assets/music/474499274_456937147_2d67cc23-761.mp3",
     coverUrl: "/assets/photos/photo_2026-04-21_12-33-06.jpg"
   }
 ];
