@@ -18,7 +18,6 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab }) => {
     <header className="sticky top-4 z-40 bg-white/30 backdrop-blur-lg border border-white/40 rounded-[2rem] p-3 shadow-lg max-w-6xl mx-auto w-full" id="app-header">
       <div className="flex flex-col md:flex-row items-center justify-between gap-4" id="header-container">
         
-        {/* App Logo */}
         <div 
           onClick={() => setActiveTab("home")}
           className="flex items-center space-x-3 cursor-pointer group"
@@ -32,7 +31,6 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab }) => {
           </span>
         </div>
 
-        {/* Tab Navigation Menu */}
         <nav className="flex items-center gap-1.5 sm:gap-2" id="header-navigation-tabs">
           {navItems.map((item) => {
             const isActive = activeTab === item.id;
@@ -59,7 +57,6 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab }) => {
           })}
         </nav>
 
-        {/* Telegram Direct Link Button */}
         <a 
           href="http://t.me/Sunshine_1_bot" 
           target="_blank" 
