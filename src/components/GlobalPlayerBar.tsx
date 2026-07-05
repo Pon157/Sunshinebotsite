@@ -13,7 +13,6 @@ import {
 } from "lucide-react";
 import { useAudio } from "../context/AudioContext";
 
-// Utility to format seconds to mm:ss format
 const formatTime = (seconds: number) => {
   if (isNaN(seconds)) return "0:00";
   const mins = Math.floor(seconds / 60);
@@ -86,7 +85,6 @@ export const GlobalPlayerBar: React.FC = () => {
         className="fixed bottom-4 left-4 right-4 z-40 bg-white/40 text-orange-950 p-4 rounded-[2rem] shadow-2xl border border-white/50 backdrop-blur-xl max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4"
         id="global-player-bar-container"
       >
-        {/* Track Details */}
         <div className="flex items-center space-x-3 w-full md:w-1/3 min-w-0" id="player-track-details">
           <div className="relative w-12 h-12 rounded-2xl overflow-hidden bg-white/40 shrink-0 border border-white/30">
             <img 
@@ -113,9 +111,7 @@ export const GlobalPlayerBar: React.FC = () => {
           </div>
         </div>
 
-        {/* Media Controls & Seeker */}
         <div className="flex flex-col items-center gap-2 w-full md:w-2/5" id="player-playback-controls">
-          {/* Action Row */}
           <div className="flex items-center space-x-4" id="player-buttons-row">
             <button
               onClick={prevTrack}
@@ -144,7 +140,6 @@ export const GlobalPlayerBar: React.FC = () => {
             </button>
           </div>
 
-          {/* Scrubber / Seeker Bar */}
           <div className="flex items-center space-x-2.5 w-full text-xxs font-mono text-orange-900/80 font-bold" id="player-seeker-row">
             <span>{formatTime(currentTime)}</span>
             <div className="relative flex-1 group py-2" id="scrubber-slider-wrapper">
@@ -157,9 +152,7 @@ export const GlobalPlayerBar: React.FC = () => {
                 className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
                 id="player-scrubber-input"
               />
-              {/* Backing Track */}
               <div className="w-full h-1 bg-orange-950/15 rounded-full relative overflow-hidden">
-                {/* Colored Progress */}
                 <div 
                   className="h-full bg-orange-600 rounded-full group-hover:bg-orange-500 transition-colors"
                   style={{ width: `${progressPercent}%` }}
@@ -170,10 +163,8 @@ export const GlobalPlayerBar: React.FC = () => {
           </div>
         </div>
 
-        {/* Volume & Utility Controllers */}
         <div className="hidden md:flex items-center space-x-4 justify-end w-full md:w-1/3" id="player-utility-controls">
           
-          {/* Animated sound equalizer bar group to show audio is physically active */}
           {isPlaying && (
             <div className="flex items-end gap-0.5 h-4 px-2" id="global-player-equalizer">
               <span className="w-0.5 bg-orange-600 rounded-sm animate-bar-1 origin-bottom" />
@@ -183,7 +174,6 @@ export const GlobalPlayerBar: React.FC = () => {
             </div>
           )}
 
-          {/* Volume Control Group */}
           <div className="flex items-center space-x-2" id="volume-control-group">
             <button
               onClick={handleMuteToggle}
