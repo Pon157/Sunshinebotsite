@@ -19,7 +19,6 @@ import {
 } from "lucide-react";
 import { NAV_LINKS } from "../data/mockData";
 
-// Helper to match link types to Lucide Icons
 const getIconForType = (type: string) => {
   switch (type) {
     case "admin":
@@ -48,7 +47,6 @@ const getIconForType = (type: string) => {
 };
 
 export const HomeSection: React.FC = () => {
-  // Stagger animation container
   const containerVariants = {
     hidden: { opacity: 0 },
     show: {
@@ -66,9 +64,7 @@ export const HomeSection: React.FC = () => {
 
   return (
     <div className="space-y-16 py-4" id="home-section-container">
-      {/* Hero Header */}
       <div className="relative text-center max-w-3xl mx-auto px-4" id="hero-header-block">
-        {/* Animated Sun Background Glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-orange-400 rounded-full blur-3xl opacity-35 -z-10 animate-pulse-slow" />
         
         <motion.div 
@@ -103,10 +99,8 @@ export const HomeSection: React.FC = () => {
         </motion.p>
       </div>
 
-      {/* Core Triggers Area */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto px-4" id="core-triggers-container">
         
-        {/* Trigger 1: Стать пользователем */}
         <motion.div 
           whileHover={{ y: -5, scale: 1.01 }}
           initial={{ opacity: 0, y: 20 }}
@@ -141,7 +135,6 @@ export const HomeSection: React.FC = () => {
           </div>
         </motion.div>
 
-        {/* Trigger 2: Стать админом */}
         <motion.div 
           whileHover={{ y: -5, scale: 1.01 }}
           initial={{ opacity: 0, y: 20 }}
@@ -176,7 +169,7 @@ export const HomeSection: React.FC = () => {
           </div>
         </motion.div>
 
-        {/* Trigger 3: Официальный Telegram Канал */}
+
         <motion.div 
           whileHover={{ y: -5, scale: 1.01 }}
           initial={{ opacity: 0, y: 20 }}
@@ -225,7 +218,7 @@ export const HomeSection: React.FC = () => {
 
       </div>
 
-      {/* Auxiliary Navigation Bento Grid */}
+
       <div className="max-w-6xl mx-auto px-4 space-y-6" id="nav-links-grid-wrapper">
         <div className="text-center md:text-left" id="links-grid-header">
           <h2 className="text-3xl font-black tracking-tight text-orange-950 font-sans uppercase">
