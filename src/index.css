@@ -15,7 +15,6 @@
 }
 
 @layer utilities {
-  /* Customized high-contrast text rendering with the warm theme background */
   body {
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
     background: linear-gradient(135deg, #FDE047 0%, #FFD6A5 50%, #FB923C 100%);
@@ -25,7 +24,6 @@
   }
 }
 
-/* Custom soundwave or sound bars animation for playing track indicator */
 @keyframes bar-grow {
   0%, 100% {
     transform: scaleY(0.3);
@@ -50,7 +48,7 @@
   animation-delay: 0.4s;
 }
 
-/* Customize scrollbar */
+
 ::-webkit-scrollbar {
   width: 6px;
 }
