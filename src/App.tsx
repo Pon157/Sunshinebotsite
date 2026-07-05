@@ -35,7 +35,7 @@ const MainLayout: React.FC = () => {
       <footer className="text-center py-8 px-6 bg-white/20 backdrop-blur-md border border-white/40 rounded-3xl mt-16 max-w-5xl mx-auto w-full text-xs text-orange-950/80 space-y-2 shadow-lg" id="app-footer-credits">
         <div className="flex items-center justify-center space-x-2 text-orange-900" id="footer-logo">
           <Sun className="w-4 h-4 text-orange-600 animate-spin-slow" style={{ animationDuration: "12s" }} />
-          <span className="font-extrabold font-sans tracking-wide uppercase">Sunshine Bot Community</span>
+          <span className="font-extrabold font-sans tracking-wide uppercase">Sunshine Bot</span>
         </div>
         <p className="font-medium">
           Официальный информационный сайт-лендинг Telegram-бота Sunshine.
