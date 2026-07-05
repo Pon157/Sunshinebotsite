@@ -65,7 +65,8 @@ export const HomeSection: React.FC = () => {
   return (
     <div className="space-y-16 py-4" id="home-section-container">
       <div className="relative text-center max-w-3xl mx-auto px-4" id="hero-header-block">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-orange-400 rounded-full blur-3xl opacity-35 -z-10 animate-pulse-slow" />
+        {/* Добавлен pointer-events-none для фонового свечения */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-orange-400 rounded-full blur-3xl opacity-35 -z-10 animate-pulse-slow pointer-events-none" />
         
         <motion.div 
           initial={{ scale: 0.8, opacity: 0 }}
@@ -109,7 +110,8 @@ export const HomeSection: React.FC = () => {
           className="bg-white/20 backdrop-blur-lg p-6 rounded-3xl text-orange-950 shadow-xl relative overflow-hidden flex flex-col justify-between group border border-white/40"
           id="trigger-user-card"
         >
-          <div className="absolute -right-8 -bottom-8 opacity-10 group-hover:scale-110 transition-transform duration-500 text-orange-700">
+          {/* Добавлен pointer-events-none */}
+          <div className="absolute -right-8 -bottom-8 opacity-10 group-hover:scale-110 transition-transform duration-500 text-orange-700 pointer-events-none">
             <Bot className="w-40 h-40" />
           </div>
           <div>
@@ -143,7 +145,8 @@ export const HomeSection: React.FC = () => {
           className="bg-white/20 backdrop-blur-lg p-6 rounded-3xl text-orange-950 shadow-xl relative overflow-hidden flex flex-col justify-between group border border-white/40"
           id="trigger-admin-card"
         >
-          <div className="absolute -right-8 -bottom-8 opacity-10 group-hover:scale-110 transition-transform duration-500 text-orange-700">
+          {/* Добавлен pointer-events-none */}
+          <div className="absolute -right-8 -bottom-8 opacity-10 group-hover:scale-110 transition-transform duration-500 text-orange-700 pointer-events-none">
             <UserCheck className="w-40 h-40" />
           </div>
           <div>
@@ -169,7 +172,6 @@ export const HomeSection: React.FC = () => {
           </div>
         </motion.div>
 
-
         <motion.div 
           whileHover={{ y: -5, scale: 1.01 }}
           initial={{ opacity: 0, y: 20 }}
@@ -178,7 +180,8 @@ export const HomeSection: React.FC = () => {
           className="bg-white/20 backdrop-blur-lg p-6 rounded-3xl text-orange-950 shadow-2xl relative overflow-hidden flex flex-col justify-between group border border-white/40"
           id="trigger-channel-card"
         >
-          <div className="absolute -right-8 -bottom-8 opacity-10 group-hover:scale-110 transition-transform duration-500 text-orange-700">
+          {/* Добавлен pointer-events-none */}
+          <div className="absolute -right-8 -bottom-8 opacity-10 group-hover:scale-110 transition-transform duration-500 text-orange-700 pointer-events-none">
             <Send className="w-40 h-40" />
           </div>
           <div>
@@ -217,7 +220,6 @@ export const HomeSection: React.FC = () => {
         </motion.div>
 
       </div>
-
 
       <div className="max-w-6xl mx-auto px-4 space-y-6" id="nav-links-grid-wrapper">
         <div className="text-center md:text-left" id="links-grid-header">
