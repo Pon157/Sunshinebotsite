@@ -1,7 +1,5 @@
 import { AdminProfile, Track } from "../types";
 
-
-
 export const ADMIN_PROFILES: AdminProfile[] = [
   {
     id: "idar",
@@ -34,19 +32,17 @@ export const ADMIN_PROFILES: AdminProfile[] = [
     id: "modo",
     name: "Модо",
     role: "Главный Администратор",
-    banner: "/public/assets/photos/photo_2026-07-05_10-45-23.jpg",
+    banner: "/assets/photos/photo_2026-07-05_10-45-23.jpg",
     about: "Люблю стреляца, шутеры, снайперские винтовки, играть в видеоигры, а ещё я супер классный и веселый бро. Punkshow & QT 💘 :D ",
     additionalPhotos: [
-      "/public/assets/photos/photo_2026-07-05_10-45-39.jpg",
-      "/public/assets/photos/photo_2026-07-05_10-45-43.jpg",
-      "/public/assets/photos/photo_2026-07-05_10-45-48.jpg",
-      "/public/assets/photos/photo_2026-07-05_10-45-51.jpg",
-      "/public/assets/photos/photo_2026-07-05_10-45-54.jpg",
-      "/public/assets/photos/photo_2026-07-05_10-45-59.jpg",
-      "/public/assets/photos/photo_2026-07-05_10-46-03.jpg",
-      "/public/assets/photos/photo_2026-07-05_10-46-06.jpg"
-
-
+      "/assets/photos/photo_2026-07-05_10-45-39.jpg",
+      "/assets/photos/photo_2026-07-05_10-45-43.jpg",
+      "/assets/photos/photo_2026-07-05_10-45-48.jpg",
+      "/assets/photos/photo_2026-07-05_10-45-51.jpg",
+      "/assets/photos/photo_2026-07-05_10-45-54.jpg",
+      "/assets/photos/photo_2026-07-05_10-45-59.jpg",
+      "/assets/photos/photo_2026-07-05_10-46-03.jpg",
+      "/assets/photos/photo_2026-07-05_10-46-06.jpg"
     ],
     music: [
       {
@@ -54,29 +50,29 @@ export const ADMIN_PROFILES: AdminProfile[] = [
         title: "Мои веснушки",
         artist: "Панкшоу prod.UkataSLaNzI",
         src: "/assets/music/Панкшоу prod.UkataSLaNzI - Мои веснушки.mp3",
-        coverUrl: "/public/assets/photos/photo_2026-07-05_10-45-51.jpg"
+        coverUrl: "/assets/photos/photo_2026-07-05_10-45-51.jpg"
       },
       {
-        id: "modo-1",
+        id: "modo-2",
         title: "Хризантеми",
         artist: "Анастимоза",
         src: "/assets/music/anastimoza_-_KHrizantemi_78275449-1.mp3",
-        coverUrl: "/public/assets/photos/photo_2026-07-05_10-45-51.jpg"
-      },
+        coverUrl: "/assets/photos/photo_2026-07-05_10-45-51.jpg"
+      }
     ]
   },
   {
     id: "charly",
     name: "Чарли",
     role: "Главный администратор",
-    banner: "/public/assets/photos/photo_2026-07-05_11-17-28.jpg",
+    banner: "/assets/photos/photo_2026-07-05_11-17-28.jpg",
     about: "Я все хорошо слышу, вижу и помню. Просто умею держать язык за зубами.",
     additionalPhotos: [
-      "/public/assets/photos/photo_2026-07-05_11-17-48.jpg",
-      "/public/assets/photos/photo_2026-07-05_11-17-56.jpg",
-      "/public/assets/photos/photo_2026-07-05_11-18-22.jpg",
-      "/public/assets/photos/photo_2026-07-05_11-18-27.jpg",
-      "/public/assets/photos/photo_2026-07-05_11-18-34.jpg",
+      "/assets/photos/photo_2026-07-05_11-17-48.jpg",
+      "/assets/photos/photo_2026-07-05_11-17-56.jpg",
+      "/assets/photos/photo_2026-07-05_11-18-22.jpg",
+      "/assets/photos/photo_2026-07-05_11-18-27.jpg",
+      "/assets/photos/photo_2026-07-05_11-18-34.jpg"
     ],
     music: [
       {
@@ -84,24 +80,24 @@ export const ADMIN_PROFILES: AdminProfile[] = [
         title: "Loonatic-39",
         artist: "Hatsune Miku  Okaasan  English   Romaji Subs",
         src: "/assets/music/Loonatic-39  Hatsune Miku  Okaasan  English   Romaji Subs.mp3",
-        coverUrl: "/public/assets/photos/photo_2026-07-05_11-18-27.jpg"
-      },
+        coverUrl: "/assets/photos/photo_2026-07-05_11-18-27.jpg"
+      }
     ]
   },
   {
     id: "Scarlet",
     name: "Скарлет",
     role: "Администратор",
-    banner: "/public/assets/photos/photo_2026-07-05_11-44-16.jpg",
+    banner: "/assets/photos/photo_2026-07-05_11-44-16.jpg",
     about: "🫀Bienvenue chez nous. Мы вряд-ли с вами когда-нибудь встретимся, так что скажу одно: любите себя, цените жизнь. А я за вами прослежу. ❤️‍🩹",
     additionalPhotos: [
-      "/public/assets/photos/photo_2026-07-05_11-44-21.jpg",
-      "/public/assets/photos/photo_2026-07-05_11-44-24.jpg",
-      "/public/assets/photos/photo_2026-07-05_11-44-28.jpg",
-      "/public/assets/photos/photo_2026-07-05_11-44-31.jpg",
-      "/public/assets/photos/photo_2026-07-05_11-44-34.jpg",
-      "/public/assets/photos/photo_2026-07-05_11-44-39.jpg",
-      "/public/assets/photos/photo_2026-07-05_11-44-43.jpg",
+      "/assets/photos/photo_2026-07-05_11-44-21.jpg",
+      "/assets/photos/photo_2026-07-05_11-44-24.jpg",
+      "/assets/photos/photo_2026-07-05_11-44-28.jpg",
+      "/assets/photos/photo_2026-07-05_11-44-31.jpg",
+      "/assets/photos/photo_2026-07-05_11-44-34.jpg",
+      "/assets/photos/photo_2026-07-05_11-44-39.jpg",
+      "/assets/photos/photo_2026-07-05_11-44-43.jpg"
     ],
     music: [
       {
@@ -109,7 +105,7 @@ export const ADMIN_PROFILES: AdminProfile[] = [
         title: "А у вас любовь?",
         artist: "Vspak",
         src: "/assets/music/А у вас любовь.mp3",
-        coverUrl: "/public/assets/photos/photo_2026-07-05_11-44-21.jpg"
+        coverUrl: "/assets/photos/photo_2026-07-05_11-44-21.jpg"
       }
     ]
   },
@@ -117,14 +113,13 @@ export const ADMIN_PROFILES: AdminProfile[] = [
     id: "Kaya",
     name: "Кая",
     role: "Главный администратор",
-    banner: "/public/assets/photos/photo_2026-07-05_12-01-54.jpg",
+    banner: "/assets/photos/photo_2026-07-05_12-01-54.jpg",
     about: "«я всегда рядом, но не всегда нужна»",
     additionalPhotos: [
-      "/public/assets/photos/photo_2026-07-05_12-01-59.jpg",
-      "/public/assets/photos/photo_2026-07-05_12-02-03.jpg",
-      "/public/assets/photos/photo_2026-07-05_12-02-08.jpg",
-      "/public/assets/photos/photo_2026-07-05_12-02-13.jpg",
-
+      "/assets/photos/photo_2026-07-05_12-01-59.jpg",
+      "/assets/photos/photo_2026-07-05_12-02-03.jpg",
+      "/assets/photos/photo_2026-07-05_12-02-08.jpg",
+      "/assets/photos/photo_2026-07-05_12-02-13.jpg"
     ],
     music: [
       {
@@ -132,14 +127,14 @@ export const ADMIN_PROFILES: AdminProfile[] = [
         title: "Русское сердце",
         artist: "The Hatters",
         src: "/assets/music/The_Hatters_-_Russkoe_serdce_80919411 (1).mp3",
-        coverUrl: "/public/assets/photos/photo_2026-07-05_12-02-03.jpg"
+        coverUrl: "/assets/photos/photo_2026-07-05_12-02-03.jpg"
       },
       {
         id: "Kaya-2",
         title: "Я вытащу тебя со дна",
         artist: "KSB muzic",
         src: "/assets/music/ксб мужик Я вытащу тебя со дна.mp3",
-        coverUrl: "/public/assets/photos/photo_2026-07-05_12-02-03.jpg"
+        coverUrl: "/assets/photos/photo_2026-07-05_12-02-03.jpg"
       }
     ]
   },
@@ -147,19 +142,16 @@ export const ADMIN_PROFILES: AdminProfile[] = [
     id: "Ayvi",
     name: "Айви",
     role: "Совладелец",
-    banner: "/public/assets/photos/photo_2026-07-05_12-20-17.jpg",
+    banner: "/assets/photos/photo_2026-07-05_12-20-17.jpg",
     about: "Приветик 👋 Я —  Ви). Мой псевдоним — Айви, я — совладелец этого бота. Ко мне всегда можно обратиться по любым вопросам, касающимся бота, а также за помощью — я с радостью помогу.Вряд - ли мы когда-нибудь встретимся, поэтому хочу сказать вам одно: всегда верьте в себя — мнение окружающих меняется ежедневно. На этом, наверное, всё :) Всех люблю 💖",
     additionalPhotos: [
-      "/public/assets/photos/photo_2026-07-05_12-20-22.jpg",
-      "/public/assets/photos/photo_2026-07-05_12-20-29.jpg",
-      "/public/assets/photos/photo_2026-07-05_12-20-33.jpg",
-      "/public/assets/photos/photo_2026-07-05_12-20-38.jpg",
-      "/public/assets/photos/photo_2026-07-05_12-20-42.jpg",
-
+      "/assets/photos/photo_2026-07-05_12-20-22.jpg",
+      "/assets/photos/photo_2026-07-05_12-20-29.jpg",
+      "/assets/photos/photo_2026-07-05_12-20-33.jpg",
+      "/assets/photos/photo_2026-07-05_12-20-38.jpg",
+      "/assets/photos/photo_2026-07-05_12-20-42.jpg"
     ],
-    music: [
-
-    ]
+    music: []
   }
 ];
 
@@ -168,22 +160,22 @@ export const ADDITIONAL_TRACKS: Track[] = [
     id: "add-1",
     title: "Питер Паркер",
     artist: "madk1d",
-    src: "/public/assets/music/tmpv0zu8fsc.mp3",
-    coverUrl: "/public/assets/photos/photo_2026-04-21_12-33-06.jpg"
+    src: "/assets/music/tmpv0zu8fsc.mp3",
+    coverUrl: "/assets/photos/photo_2026-04-21_12-33-06.jpg"
   },
   {
     id: "add-2",
     title: "Glagiator",
     artist: "Jann",
-    src: "/public/assets/music/jann_-_Gladiator_75450126.mp3",
-    coverUrl: "/public/assets/photos/photo_2026-04-21_12-33-06.jpg"
+    src: "/assets/music/jann_-_Gladiator_75450126.mp3",
+    coverUrl: "/assets/photos/photo_2026-04-21_12-33-06.jpg"
   },
   {
     id: "add-3",
     title: "Mattyeux",
     artist: "Sometimes",
-    src: "/public/assets/music/tmp2jzhxx5g.mp3",
-    coverUrl: "/public/assets/photos/photo_2026-04-21_12-33-06.jpg"
+    src: "/assets/music/tmp2jzhxx5g.mp3",
+    coverUrl: "/assets/photos/photo_2026-04-21_12-33-06.jpg"
   }
 ];
 
