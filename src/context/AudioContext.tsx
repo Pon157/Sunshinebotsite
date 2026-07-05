@@ -25,7 +25,6 @@ interface AudioContextType {
 
 const AudioContext = createContext<AudioContextType | undefined>(undefined);
 
-// Gather all tracks from everywhere as a master list for default queue
 const ALL_TRACKS: Track[] = [];
 ADMIN_PROFILES.forEach((admin) => {
   admin.music.forEach((track) => {
@@ -79,11 +78,9 @@ export const AudioProvider: React.FC<{ children: React.ReactNode }> = ({ childre
 
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  // Sync queue with allTracks whenever they change
   useEffect(() => {
     setQueue(allTracks);
     if (currentTrack) {
-      // Keep currently playing track metadata updated with any override changes
       const updated = allTracks.find(t => t.id === currentTrack.id);
       if (updated) {
         setCurrentTrack(updated);
@@ -91,7 +88,6 @@ export const AudioProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     }
   }, [allTracks]);
 
-  // Initialize Audio
   useEffect(() => {
     audioRef.current = new Audio();
     audioRef.current.volume = volume;
@@ -126,7 +122,6 @@ export const AudioProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     };
   }, []);
 
-  // Update volume
   const setVolume = (newVolume: number) => {
     const val = Math.max(0, Math.min(1, newVolume));
     setVolumeState(val);
@@ -135,14 +130,12 @@ export const AudioProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     }
   };
 
-  // Add custom track
   const addCustomTrack = (track: Track) => {
     const newList = [...customTracks, track];
     setCustomTracks(newList);
     localStorage.setItem("sunshine_custom_tracks", JSON.stringify(newList));
   };
 
-  // Update track banner url
   const updateTrackBanner = (trackId: string, bannerUrl: string) => {
     const newOverrides = {
       ...trackOverrides,
@@ -155,7 +148,6 @@ export const AudioProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     localStorage.setItem("sunshine_track_overrides", JSON.stringify(newOverrides));
   };
 
-  // Update track source url (audio)
   const updateTrackSrc = (trackId: string, src: string) => {
     const newOverrides = {
       ...trackOverrides,
@@ -168,13 +160,11 @@ export const AudioProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     localStorage.setItem("sunshine_track_overrides", JSON.stringify(newOverrides));
   };
 
-  // Delete dynamic track
   const deleteTrack = (trackId: string) => {
     const newList = customTracks.filter((t) => t.id !== trackId);
     setCustomTracks(newList);
     localStorage.setItem("sunshine_custom_tracks", JSON.stringify(newList));
     
-    // Clear currently playing if it was this track
     if (currentTrack?.id === trackId) {
       if (audioRef.current) {
         audioRef.current.pause();
@@ -184,11 +174,9 @@ export const AudioProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     }
   };
 
-  // Play a specific track
   const playTrack = (track: Track, customQueue?: Track[]) => {
     if (!audioRef.current) return;
 
-    // Retrieve full resolved track from allTracks (to get latest overrides)
     const resolvedTrack = allTracks.find((t) => t.id === track.id) || track;
 
     if (customQueue && customQueue.length > 0) {
@@ -204,13 +192,11 @@ export const AudioProvider: React.FC<{ children: React.ReactNode }> = ({ childre
       return;
     }
 
-    // Set new track source
     audioRef.current.src = resolvedTrack.src;
     setCurrentTrack(resolvedTrack);
     setCurrentTime(0);
     setDuration(0);
 
-    // Play the track
     const playPromise = audioRef.current.play();
     if (playPromise !== undefined) {
       playPromise
@@ -224,7 +210,6 @@ export const AudioProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     }
   };
 
-  // Pause track
   const pauseTrack = () => {
     if (audioRef.current) {
       audioRef.current.pause();
@@ -232,7 +217,6 @@ export const AudioProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     }
   };
 
-  // Resume track
   const resumeTrack = () => {
     if (audioRef.current && currentTrack) {
       const playPromise = audioRef.current.play();
@@ -249,7 +233,6 @@ export const AudioProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     }
   };
 
-  // Seek to specific timeline percentage/seconds
   const seek = (time: number) => {
     if (audioRef.current) {
       audioRef.current.currentTime = time;
@@ -257,23 +240,18 @@ export const AudioProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     }
   };
 
-  // Skip to next track
   const handleNextTrack = () => {
     if (!currentTrack || queue.length === 0) return;
     const currentIndex = queue.findIndex((t) => t.id === currentTrack.id);
     if (currentIndex === -1) {
-      // If not in current queue, play first of the queue
       playTrack(queue[0]);
     } else if (currentIndex < queue.length - 1) {
-      // Play next
       playTrack(queue[currentIndex + 1]);
     } else {
-      // Loop back to start
       playTrack(queue[0]);
     }
   };
 
-  // Skip to previous track
   const handlePrevTrack = () => {
     if (!currentTrack || queue.length === 0) return;
     const currentIndex = queue.findIndex((t) => t.id === currentTrack.id);
@@ -282,7 +260,6 @@ export const AudioProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     } else if (currentIndex > 0) {
       playTrack(queue[currentIndex - 1]);
     } else {
-      // Go to end of queue
       playTrack(queue[queue.length - 1]);
     }
   };
