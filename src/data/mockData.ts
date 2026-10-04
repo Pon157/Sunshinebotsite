@@ -6,7 +6,7 @@ export const ADMIN_PROFILES: AdminProfile[] = [
     name: "Идар",
     role: "Основатель & Владелец",
     banner: "/assets/photos/photo_2026-07-05_09-52-55.jpg",
-    about: "Я Идар , Владелец @sunshine_1_bot , под псевдонимом #Моракс, люблю котят, химию, админов и конечно же свой проект «Даже после самой темной ночи , обязательно будет рассвет» ✍️",
+    about: "Я Идар , Владелец @sunshine_1_bot , под псевдонимом #Моракс, люблю котят, химию, админов и конечно же свой проект.",
     additionalPhotos: [
       "/assets/photos/photo_2026-07-05_09-53-01.jpg",
       "/assets/photos/photo_2026-07-05_09-53-06.jpg"
@@ -33,7 +33,7 @@ export const ADMIN_PROFILES: AdminProfile[] = [
     name: "Модо",
     role: "Главный Администратор",
     banner: "/assets/photos/photo_2026-07-05_10-45-23.jpg",
-    about: "Люблю стреляца, шутеры, снайперские винтовки, играть в видеоигры, а ещё я супер классный и веселый бро. Punkshow & QT 💘 :D ",
+    about: "Люблю стреляца, шутеры, снайперские винтовки, играть в видеоигры, а ещё я супер классный и веселый парень.",
     additionalPhotos: [
       "/assets/photos/photo_2026-07-05_10-45-39.jpg",
       "/assets/photos/photo_2026-07-05_10-45-43.jpg",
@@ -89,7 +89,7 @@ export const ADMIN_PROFILES: AdminProfile[] = [
     name: "Скарлет",
     role: "Администратор",
     banner: "/assets/photos/photo_2026-07-05_11-44-16.jpg",
-    about: "🫀Bienvenue chez nous. Мы вряд-ли с вами когда-нибудь встретимся, так что скажу одно: любите себя, цените жизнь. А я за вами прослежу. ❤️‍🩹",
+    about: "🫀Bienvenue chez nous. Мы вряд-ли с вами когда-нибудь встретимся, так что скажу одно: любите себя, цените жизнь.",
     additionalPhotos: [
       "/assets/photos/photo_2026-07-05_11-44-21.jpg",
       "/assets/photos/photo_2026-07-05_11-44-24.jpg",
@@ -143,7 +143,7 @@ export const ADMIN_PROFILES: AdminProfile[] = [
     name: "Айви",
     role: "Совладелец",
     banner: "/assets/photos/photo_2026-07-05_12-20-17.jpg",
-    about: "Приветик 👋 Я —  Ви). Мой псевдоним — Айви, я — совладелец этого бота. Ко мне всегда можно обратиться по любым вопросам, касающимся бота, а также за помощью — я с радостью помогу.Вряд - ли мы когда-нибудь встретимся, поэтому хочу сказать вам одно: всегда верьте в себя — мнение окружающих меняется ежедневно. На этом, наверное, всё :) Всех люблю 💖",
+    about: "Приветик 👋 Я — Ви). Мой псевдоним — Айви, я — совладелец этого бота. Ко мне всегда можно обратиться.",
     additionalPhotos: [
       "/assets/photos/photo_2026-07-05_12-20-22.jpg",
       "/assets/photos/photo_2026-07-05_12-20-29.jpg",
@@ -192,7 +192,7 @@ export const ADDITIONAL_TRACKS: Track[] = [
     coverUrl: "/assets/photos/photo_2026-04-21_12-33-06.jpg"
   },
   {
-    id: "add-5",
+    id: "add-6",
     title: "Агенство насилия",
     artist: "SABU",
     src: "/assets/music/474499274_456937147_2d67cc23-761.mp3",
@@ -226,7 +226,7 @@ export const NAV_LINKS = [
     id: "nav-tiktok",
     title: "TikTok канал",
     url: "https://www.tiktok.com/@sunshinebott?_t=ZS-8wn2YcdUpSp&_r=1",
-    description: "Наш официальны аккаунт в ТикТок",
+    description: "Наш официальный аккаунт в ТикТок",
     type: "tiktok"
   },
   {
@@ -246,7 +246,7 @@ export const NAV_LINKS = [
   {
     id: "nav-promo",
     title: "Реклама",
-    url: "https://t.me/sunshinebott/222",
+    url: "https://t.me/sunshinebott/402",
     description: "Информация о сотрудничестве, тарифах и интеграции вашей рекламы",
     type: "promo"
   },
