@@ -1,5 +1,5 @@
 import React from "react";
-import { Sun, Bot, ArrowUpRight } from "lucide-react";
+import { Sun, ArrowUpRight } from "lucide-react";
 
 interface HeaderProps {
   activeTab: "home";
@@ -9,7 +9,7 @@ interface HeaderProps {
 export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab }) => {
   return (
     <header className="sticky top-4 z-40 bg-white/30 backdrop-blur-lg border border-white/40 rounded-[2rem] p-3 shadow-lg max-w-6xl mx-auto w-full" id="app-header">
-      <div className="flex flex-col md:flex-row items-center justify-between gap-4" id="header-container">
+      <div className="flex items-center justify-between gap-4" id="header-container">
         <div
           onClick={() => setActiveTab("home")}
           className="flex items-center space-x-3 cursor-pointer group"
@@ -22,8 +22,6 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab }) => {
             Sunshine
           </span>
         </div>
-
-        <div className="hidden md:flex items-center gap-1.5 sm:gap-2" id="header-navigation-tabs" />
 
         <a
           href="http://t.me/Sunshine_1_bot"
