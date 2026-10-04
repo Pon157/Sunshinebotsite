@@ -3,13 +3,11 @@ import { motion, AnimatePresence } from "motion/react";
 import { AudioProvider } from "./context/AudioContext";
 import { Header } from "./components/Header";
 import { HomeSection } from "./components/HomeSection";
-import { AdminSection } from "./components/AdminSection";
-import { PlaylistSection } from "./components/PlaylistSection";
 import { GlobalPlayerBar } from "./components/GlobalPlayerBar";
-import { Sun, Heart, Send, Sparkles } from "lucide-react";
+import { Sun, Heart } from "lucide-react";
 
 const MainLayout: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<"home" | "admin" | "playlist">("home");
+  const [activeTab, setActiveTab] = useState<"home">("home");
 
   return (
     <div className="min-h-screen flex flex-col text-orange-950 pb-32 pt-4 px-2 sm:px-4" id="app-root-layout">
@@ -26,13 +24,11 @@ const MainLayout: React.FC = () => {
             id="active-tab-container"
           >
             {activeTab === "home" && <HomeSection />}
-            {activeTab === "admin" && <AdminSection />}
-            {activeTab === "playlist" && <PlaylistSection />}
           </motion.div>
         </AnimatePresence>
       </main>
 
-      <footer className="text-center py-8 px-6 bg-white/20 backdrop-blur-md border border-white/40 rounded-3xl mt-16 max-w-5xl mx-auto w-full text-xs text-orange-950/80 space-y-2 shadow-lg" id="app-footer-credits">
+      <footer className="text-center py-8 px-6 bg-white/20 backdrop-blur-md border border-white/40 rounded-3xl mt-16 max-w-5xl mx-auto w-full text-xs text-orange-950/80 space-y-2 shadow-lg" id="app-footer">
         <div className="flex items-center justify-center space-x-2 text-orange-900" id="footer-logo">
           <Sun className="w-4 h-4 text-orange-600 animate-spin-slow" style={{ animationDuration: "12s" }} />
           <span className="font-extrabold font-sans tracking-wide uppercase">Sunshine Bot</span>
